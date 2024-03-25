@@ -197,7 +197,13 @@ const LoginPage = () => {
                 Admin: <strong>admin@gmail.com</strong> / Pass: <strong>admin</strong>
               </Typography>
               <Typography variant='body2' sx={{ color: 'primary.main' }}>
-                Client: <strong>staff@gmail.com</strong> / Pass: <strong>client</strong>
+                Staff: <strong>staff@gmail.com</strong> / Pass: <strong>staff</strong>
+              </Typography>
+              <Typography variant='body2' sx={{ color: 'primary.main' }}>
+                Client: <strong>client@gmail.com</strong> / Pass: <strong>client</strong>
+              </Typography>
+              <Typography variant='body2' sx={{ color: 'primary.main' }}>
+                Parent: <strong>parent@gmail.com</strong> / Pass: <strong>parent</strong>
               </Typography>
             </Alert>
             <form noValidate autoComplete='off' onSubmit={handleSubmit(onSubmit)}>

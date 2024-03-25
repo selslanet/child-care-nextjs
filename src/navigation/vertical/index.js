@@ -4,6 +4,11 @@ const navigation = () => {
       sectionTitle: 'Student'
     },
     {
+      title: 'Calendar',
+      icon: 'tabler:calendar',
+      path: '/apps/talha/list'
+    },
+    {
       title: 'All Student',
       icon: 'tabler:user',
       path: '/apps/student/list'
@@ -46,6 +51,7 @@ const navigation = () => {
       icon: 'tabler:calendar',
       path: '/apps/calendar'
     },
+
     {
       title: 'Invoice',
       icon: 'tabler:file-dollar',

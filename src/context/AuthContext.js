@@ -63,8 +63,9 @@ const AuthProvider = ({ children }) => {
 
   const handleLogin = (params, errorCallback) => {
     axios
-      .post(authConfig.loginEndpoint, params)
+      .post(authConfig.baseUrl + authConfig.loginEndpoint, params)
       .then(async response => {
+        console.log(response);
         params.rememberMe
           ? window.localStorage.setItem(authConfig.storageTokenKeyName, response.data.accessToken)
           : null

@@ -148,7 +148,7 @@ const columns = [
 
       return (
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
-          {/* {renderClient(row)} */}
+          {renderClient(row)}
           <Box sx={{ display: 'flex', alignItems: 'flex-start', flexDirection: 'column' }}>
             <Typography
               noWrap
@@ -304,7 +304,66 @@ const UserList = ({ apiData }) => {
       </Grid>
       <Grid item xs={12}>
         <Card>
-
+          <CardHeader title='Search Filters' />
+          <CardContent>
+            <Grid container spacing={6}>
+              <Grid item sm={4} xs={12}>
+                <CustomTextField
+                  select
+                  fullWidth
+                  defaultValue='Select Room'
+                  SelectProps={{
+                    value: role,
+                    displayEmpty: true,
+                    onChange: e => handleRoleChange(e)
+                  }}
+                >
+                  <MenuItem value=''>Select Room</MenuItem>
+                  <MenuItem value='Room'>Room 01</MenuItem>
+                  <MenuItem value='Room'>Room 02</MenuItem>
+                  <MenuItem value='Room'>Room 03</MenuItem>
+                  <MenuItem value='Room'>Room 04</MenuItem>
+                  <MenuItem value='Room'>Room 05</MenuItem>
+                </CustomTextField>
+              </Grid>
+              <Grid item sm={4} xs={12}>
+                <CustomTextField
+                  select
+                  fullWidth
+                  defaultValue='Select Teacher'
+                  SelectProps={{
+                    value: plan,
+                    displayEmpty: true,
+                    onChange: e => handlePlanChange(e)
+                  }}
+                >
+                  <MenuItem value=''>Teacher</MenuItem>
+                  <MenuItem value='Teacher'>Teacher 01</MenuItem>
+                  <MenuItem value='Teacher'>Teacher 02</MenuItem>
+                  <MenuItem value='Teacher'>Teacher 03</MenuItem>
+                  <MenuItem value='Teacher'>Teacher 04</MenuItem>
+                </CustomTextField>
+              </Grid>
+              <Grid item sm={4} xs={12}>
+                <CustomTextField
+                  select
+                  fullWidth
+                  defaultValue='Select Status'
+                  SelectProps={{
+                    value: status,
+                    displayEmpty: true,
+                    onChange: e => handleStatusChange(e)
+                  }}
+                >
+                  <MenuItem value=''>Select Status</MenuItem>
+                  <MenuItem value='pending'>Pending</MenuItem>
+                  <MenuItem value='active'>Active</MenuItem>
+                  <MenuItem value='inactive'>Inactive</MenuItem>
+                </CustomTextField>
+              </Grid>
+            </Grid>
+          </CardContent>
+          <Divider sx={{ m: '0 !important' }} />
           <TableHeader value={value} handleFilter={handleFilter} toggle={toggleAddUserDrawer} />
           <DataGrid
             autoHeight
